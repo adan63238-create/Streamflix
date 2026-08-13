@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Streamflixor — Watch Without Limits</title>
+  <meta name="description" content="Stream movies, series and entertainment with Streamflixor.">
+  <meta name="theme-color" content="#071A1F">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <a href="#" class="brand" aria-label="Streamflixor Home">
+      <span class="brand-mark">S</span>
+      <span class="brand-name">streamflixor</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#movies" class="nav-link">Movies</a>
+      <a href="#series" class="nav-link">Series</a>
+      <a href="#categories" class="nav-link">Categories</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn search-toggle" aria-label="Search" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.5"></circle>
+          <path d="M16 16L21 21"></path>
+        </svg>
+      </button>
+
+      <button class="profile-btn" type="button" aria-label="Open profile">
+        <span class="profile-avatar">A</span>
+      </button>
+
+      <button class="menu-toggle" type="button" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= SEARCH ================= -->
+  <section class="search-panel" id="searchPanel">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="11" cy="11" r="6.5"></circle>
+        <path d="M16 16L21 21"></path>
+      </svg>
+
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search movies, series, genres..."
+        autocomplete="off"
+      >
+
+      <button id="closeSearch" type="button" aria-label="Close search">
+        ×
+      </button>
+    </div>
+
+    <div class="search-results" id="searchResults"></div>
+  </section>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+
+      <div class="hero-backdrop"></div>
+
+      <div class="hero-content">
+        <div class="hero-meta">
+          <span class="meta-badge">STREAMFLIXOR ORIGINAL</span>
+          <span>2026</span>
+          <span>2h 18m</span>
+          <span class="rating">★ 8.7</span>
+        </div>
+
+        <h1 class="hero-title">Beyond<br><span>The Horizon</span></h1>
+
+        <p class="hero-description">
+          When humanity's last deep-space mission discovers something
+          impossible beyond the edge of the known universe, one crew must
+          decide whether to return home or cross the point of no return.
+        </p>
+
+        <div class="hero-genres">
+          <span>Sci-Fi</span>
+          <span>Adventure</span>
+          <span>Drama</span>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary play-btn" type="button" data-title="Beyond The Horizon">
+            <span class="play-icon">▶</span>
+            Watch Now
+          </button>
+
+          <button class="btn btn-secondary add-btn" type="button" data-title="Beyond The Horizon">
+            <span>＋</span>
+            My List
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-indicator">
+        <span class="indicator-line active"></span>
+        <span class="indicator-line"></span>
+        <span class="indicator-line"></span>
+        <span class="indicator-line"></span>
+      </div>
+
+      <div class="scroll-hint">
+        <span>Explore</span>
+        <span class="scroll-arrow">↓</span>
+      </div>
+    </section>
+
+    <!-- ================= TRENDING ================= -->
+    <section class="content-section" id="movies">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">WHAT'S HOT</span>
+          <h2>Trending now</h2>
+        </div>
+
+        <button class="view-all" type="button">
+          View all <span>→</span>
+        </button>
+      </div>
+
+      <div class="movie-grid" id="trendingGrid">
+
+        <article class="movie-card" data-title="Neon District" data-category="Action">
+          <div class="poster poster-one">
+            <span class="poster-number">01</span>
+            <div class="poster-info">
+              <span class="card-quality">4K</span>
+              <h3>Neon District</h3>
+              <p>Action · 2026</p>
+            </div>
+          </div>
+          <button class="card-add" type="button" aria-label="Add Neon District">+</button>
+        </article>
+
+        <article class="movie-card" data-title="The Last Signal" data-category="Sci-Fi">
+          <div class="poster poster-two">
+            <span class="poster-number">02</span>
+            <div class="poster-info">
+              <span class="card-quality">4K</span>
+              <h3>The Last Signal</h3>
+              <p>Sci-Fi · 2026</p>
+            </div>
+          </div>
+          <button class="card-add" type="button" aria-label="Add The Last Signal">+</button>
+        </article>
+
+        <article class="movie-card" data-title="Wild Tide" data-category="Adventure">
+          <div class="poster poster-three">
+            <span class="poster-number">03</span>
+            <div class="poster-info">
+              <span class="card-quality">HD</span>
+              <h3>Wild Tide</h3>
+              <p>Adventure · 2025</p>
+            </div>
+          </div>
+          <button class="card-add" type="button" aria-label="Add Wild Tide">+</button>
+        </article>
+
+        <article class="movie-card" data-title="After Midnight" data-category="Drama">
+          <div class="poster poster-four">
+            <span class="poster-number">04</span>
+            <div class="poster-info">
+              <span class="card-quality">4K</span>
+              <h3>After Midnight</h3>
+              <p>Drama · 2026</p>
+            </div>
+          </div>
+          <button class="card-add" type="button" aria-label="Add After Midnight">+</button>
+        </article>
+
+        <article class="movie-card" data-title="Parallel" data-category="Sci-Fi">
+          <div class="poster poster-five">
+            <span class="poster-number">05</span>
+            <div class="poster-info">
+              <span class="card-quality">4K</span>
+              <h3>Parallel</h3>
+              <p>Sci-Fi · 2025</p>
+            </div>
+          </div>
+          <button class="card-add" type="button" aria-label="Add Parallel">+</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= CONTINUE WATCHING ================= -->
+    <section class="content-section continue-section">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">PICK UP WHERE YOU LEFT OFF</span>
+          <h2>Continue watching</h2>
+        </div>
+      </div>
+
+      <div class="continue-grid">
+
+        <article class="continue-card">
+          <div class="continue-thumbnail thumbnail-one">
+            <button class="mini-play" type="button" aria-label="Play City of Echoes">▶</button>
+            <span class="duration">42 min left</span>
+          </div>
+
+          <div class="continue-details">
+            <div>
+              <h3>City of Echoes</h3>
+              <p>S01 · E04 — The Crossing</p>
+            </div>
+
+            <div class="progress-track">
+              <span style="width: 68%"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="continue-card">
+          <div class="continue-thumbnail thumbnail-two">
+            <button class="mini-play" type="button" aria-label="Play Black Meridian">▶</button>
+            <span class="duration">28 min left</span>
+          </div>
+
+          <div class="continue-details">
+            <div>
+              <h3>Black Meridian</h3>
+              <p>S01 · E07 — The Divide</p>
+            </div>
+
+            <div class="progress-track">
+              <span style="width: 42%"></span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= CATEGORIES ================= -->
+    <section class="category-section" id="categories">
+
+      <div class="category-content">
+        <span class="eyebrow">FIND YOUR MOOD</span>
+        <h2>Something for<br><span>every moment.</span></h2>
+        <p>
+          Explore stories across worlds, genres and emotions.
+          Your next favorite is waiting.
+        </p>
+      </div>
+
+      <div class="category-list">
+
+        <button class="category-item" type="button" data-category="Action">
+          <span class="category-icon">↗</span>
+          <span>Action</span>
+          <span class="category-arrow">→</span>
+        </button>
+
+        <button class="category-item" type="button" data-category="Sci-Fi">
+          <span class="category-icon">◇</span>
+          <span>Sci-Fi</span>
+          <span class="category-arrow">→</span>
+        </button>
+
+        <button class="category-item" type="button" data-category="Drama">
+          <span class="category-icon">◌</span>
+          <span>Drama</span>
+          <span class="category-arrow">→</span>
+        </button>
+
+        <button class="category-item" type="button" data-category="Comedy">
+          <span class="category-icon">✦</span>
+          <span>Comedy</span>
+          <span class="category-arrow">→</span>
+        </button>
+
+        <button class="category-item" type="button" data-category="Adventure">
+          <span class="category-icon">△</span>
+          <span>Adventure</span>
+          <span class="category-arrow">→</span>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ================= SERIES ================= -->
+    <section class="content-section" id="series">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">BINGE-WORTHY</span>
+          <h2>Popular series</h2>
+        </div>
+
+        <button class="view-all" type="button">
+          View all <span>→</span>
+        </button>
+      </div>
+
+      <div class="series-grid">
+
+        <article class="series-card">
+          <div class="series-art series-one">
+            <span class="series-label">SERIES</span>
+            <h3>Northbound</h3>
+            <p>Some roads lead nowhere.</p>
+          </div>
+          <div class="series-meta">
+            <span>2 Seasons</span>
+            <span>★ 9.1</span>
+          </div>
+        </article>
+
+        <article class="series-card">
+          <div class="series-art series-two">
+            <span class="series-label">NEW</span>
+            <h3>Frequency</h3>
+            <p>Every signal has a story.</p>
+          </div>
+          <div class="series-meta">
+            <span>1 Season</span>
+            <span>★ 8.8</span>
+          </div>
+        </article>
+
+        <article class="series-card">
+          <div class="series-art series-three">
+            <span class="series-label">TOP 10</span>
+            <h3>Glass House</h3>
+            <p>Nothing stays hidden forever.</p>
+          </div>
+          <div class="series-meta">
+            <span>3 Seasons</span>
+            <span>★ 8.9</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+
+    <div class="footer-brand">
+      <a href="#" class="brand">
+        <span class="brand-mark">S</span>
+        <span class="brand-name">streamflixor</span>
+      </a>
+
+      <p>Stories worth staying up for.</p>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Explore</h4>
+        <a href="#movies">Movies</a>
+        <a href="#series">Series</a>
+        <a href="#categories">Categories</a>
+      </div>
+
+      <div>
+        <h4>Streamflixor</h4>
+        <a href="#">About</a>
+        <a href="#">Help Center</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Streamflixor</span>
+      <span>Made for stories.</span>
+    </div>
+
+  </footer>
+
+  <!-- ================= MOBILE NAV ================= -->
+  <div class="mobile-nav">
+
+    <a href="#home" class="mobile-nav-item active">
+      <span>⌂</span>
+      <small>Home</small>
+    </a>
+
+    <button class="mobile-search mobile-nav-item" type="button">
+      <span>⌕</span>
+      <small>Search</small>
+    </button>
+
+    <a href="#movies" class="mobile-nav-item">
+      <span>▣</span>
+      <small>Movies</small>
+    </a>
+
+    <a href="#series" class="mobile-nav-item">
+      <span>▤</span>
+      <small>Series</small>
+    </a>
+
+    <button class="mobile-profile mobile-nav-item" type="button">
+      <span>◉</span>
+      <small>Profile</small>
+    </button>
+
+  </div>
+
+  <!-- ================= TOAST ================= -->
+  <div class="toast" id="toast" role="status">
+    <span class="toast-icon">✓</span>
+    <span id="toastMessage">Added to your list</span>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+  </html>
